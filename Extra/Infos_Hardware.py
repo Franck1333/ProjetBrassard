@@ -35,7 +35,7 @@ def CPU_temp():
     print ("Temperature du Processeur: "+ cputemp)
 
     #--
-    tk_cputemp        = "Temperature du Processeur :" + cputemp                             #Mise en forme pour l'affichage sous Tkinter
+    tk_cputemp        = "Temperature du Processeur: " + cputemp                             #Mise en forme pour l'affichage sous Tkinter
     #--
 
     return tk_cputemp 

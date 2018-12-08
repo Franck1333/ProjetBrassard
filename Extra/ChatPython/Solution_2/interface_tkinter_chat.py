@@ -35,4 +35,4 @@ def ChatRoom():
 Button(fenetre, text="Go a la ChatRoom", command=ChatRoom).pack()   #Bouton d'acces au Chat dans le menu principale
 Button(fenetre, text="Fermer...", command=fenetre.quit).pack()      #Bouton de Fermeture du Programme
 #window.mainloop()
-fenetre.mainloop()                                                  #Lancement de la Fenetre Principale.
+fenetre.mainloop()    

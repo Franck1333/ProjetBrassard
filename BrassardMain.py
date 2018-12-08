@@ -132,7 +132,7 @@ def update_information_Complementaire():
     tk_tk_tel_urgence["text"] = numero_urgence()
 
     # Après X seconde , on met à jour le contenue text du LABEL
-    fenetre.after(50013, update_information_Complementaire)
+    fenetre.after(500013, update_information_Complementaire)
 #---
 information_Complementaire() #Lancement de la Fonctionnalitée.
 #------------------------------------------------------------------------------
@@ -474,7 +474,7 @@ if __name__ == "__main__":
         #Récupération des informations pour la Mise à jour du LABEL toute les 1 milliseconde quand la fenêtre Maitre est lancée
         fenetre.after(1, update_temps_actuel)               #update_temps_actuel()
         fenetre.after(1, update_information_Materiel)       #update_information_Materiel()
-        fenetre.after(1, update_information_Complementaire) #update_information_Complementaire()
+        #fenetre.after(1, update_information_Complementaire) #update_information_Complementaire()
         fenetre.mainloop()                                  #Boucle de Lancement de la Fenêtre Principale
 
         GPSErreur.after(1,ProgressBar_refresh_GPSErreur)    #ProgressBar_refresh_GPSErreur()
