@@ -25,7 +25,6 @@ from geopy.geocoders import Nominatim   #Nominatim Service
 #---
 #Cette blibliothèque permet de travailler avec du contenue contenant des accents
 import unidecode #--> sudo pip install unidecode
-
 #unaccented_location = unidecode.unidecode(valeur)
 #---
 
@@ -271,7 +270,7 @@ def determine_Brassard():
 
     location = geolocator.reverse(coordonees_GPS,timeout=73)      #Envoie aux Services de Nominatim les coordonées GPS et reception de la Réponse
 
-    unaccented_location = unidecode.unidecode(location.address)             #On Retire les Accents de la Réponse de l'API
+    #unaccented_location = unidecode.unidecode(location.address)             #On Retire les Accents de la Réponse de l'API
     #print("\n")                                                             #Saut de ligne
     #print(unaccented_location)                                              #Affichage de la Réponse (sans accents)
     #print("\n")                                                             #Saut de Ligne
@@ -340,6 +339,7 @@ def determine_less():
     #{'place_id': '654513', 'osm_type': 'node', ...}                        #Exemple du format des données reçu enregistrer dans "location.raw"
     resultat_Ville = Ville
     return resultat_Ville #RETOURNE LE STRING DE LA LOCALISATION DETERMINE
+#-------------------------------#NOUS INDICONS UNIQUEMENT LA VILLE ICI
 #-------------------------------
 #-------------------------------
 def lecture_serie():
