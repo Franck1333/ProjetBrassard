@@ -553,9 +553,15 @@ def FenetreGPS():
             scrollbar.pack(side=RIGHT, fill=Y)                          #Placement de la Scollbar dans la fenêtre
             texteISS=Text(PredictionISS, yscrollcommand=scrollbar.set)  #Déclaration du Widget "TEXT" dans la fenêtre "top10" et sa liaison avec le ScrollBar
             #Récuperation des données        
-            INDICE_ISS,Taille_reponse,lisible_duration,lisible_apparition = GPS_Predict_ISS()
+            INDICE_ISS,Taille_reponse,resultat,resultat['response'][INDICE_ISS]['duration'],resultat['response'][INDICE_ISS]['risetime'] = GPS_Predict_ISS()
 
+            
             for INDICE_ISS in range(Taille_reponse):                                                                                #Traitement à partir de 0 jusqu'a la taille de la Réponse reçu 
+                reponse_duration = resultat['response'][INDICE_ISS]['duration']                 #Reception de la Valeur correspondant au Temps d'Apparition de l'ISS dans le Ciel
+                reponse_risetime = resultat['response'][INDICE_ISS]['risetime']                 #Reception de la Valeur correspondant au Moment de l'Apparition de l'ISS dans le Ciel
+                #CONVERTION EN VARIABLE LISIBLE
+                lisible_duration = str(datetime.timedelta(seconds=reponse_duration))        #On convertis les Secondes en Formats Heures:Minutes:Secondes lisibles par tous
+                lisible_apparition = str(time.ctime(reponse_risetime))                      #On convertis le Format Timestamp en format habituel Humain des Dates
 
                 texteISS.insert(END,"\n" + "Voici l'Apparition Numero #"+ str(INDICE_ISS) + " de l'ISS a votre position: " + "\n")      #Méthode permettant l'ajout de texte
 
