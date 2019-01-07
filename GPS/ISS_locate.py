@@ -62,7 +62,7 @@ def GPS_Predict_ISS():
     #'0:11:06'
     #---    
     #---TRAITEMENT DES DONNEES---
-    return INDICE,lisible_duration,lisible_apparition
+    return INDICE,Taille_reponse,lisible_duration,lisible_apparition
 
 def GPS_Now_ISS():
     global ISS_latitude
