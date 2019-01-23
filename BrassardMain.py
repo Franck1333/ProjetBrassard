@@ -5,45 +5,51 @@
 #Aides : http://www.fil.univ-lille1.fr/~marvie/python/chapitre6.html
 #AIDES : https://www.daniweb.com/programming/software-development/threads/39554/how-to-opening-a-new-window-on-clicking-menu-item
 
-import os
-import sys
-import datetime
-import time
+import os                                                   #Blibliotheque permettant l'interaction avec le systeme
+import sys                                                  #Blibliotheque permettant l'interaction avec le systeme
+import datetime                                             #Blibliotheque permettant d'obtenir la date
+import time                                                 #Blibliotheque permettant d'obtenir la date
 
-from Tkinter import * #Python Version 2
-import ttk
+from Tkinter import * #Python Version 2                     #Blibliotheque permettant d'obtenir Tkinter(G.U.I)
+import ttk                                                  #Blibliotheque permettant de charger un composant Tkinter(G.U.I)
 
 #------------------------------------------------------------
 # Add the root GPS dir so Python can find the modules
 import sys
-sys.path.append('/home/pi/ProjetBrassard/GPS')
+sys.path.append('/home/pi/ProjetBrassard/GPS')              #On indique au systeme ou ce situe le repertoire "GPS" dans l'Appareil
 
-from Boussole import boussole
-from Recuperation_Determination import determine_Brassard
-from Recuperation_Determination import lecture_return_serie
-from Meteo import main_meteo
-from GPSoI import recuperation_coordonees_ip_brassard
-from GPSoI import recuperation_coordonees_ip_brassard_V2
-from emergency_number import numero_urgence
-from Map_YANDEX import getMap
-from Map_YANDEX import getMap_ISS
-from ISS_locate import GPS_Now_ISS
-from ISS_locate import GPS_Predict_ISS
+from Boussole import boussole                               #Obtention des informations de la Boussole Numerique
+
+from Recuperation_Determination import determine_Brassard   #Obtention de la localisation de l'Utilisateur
+from Recuperation_Determination import lecture_return_serie #Obtention des informations GPS de l'Utilisateur
+
+from Meteo import main_meteo                                #Obtention de la Meteo
+
+from GPSoI import recuperation_coordonees_ip_brassard       #Obtention des iformations lie a l'adresse IP de l'utilisateur (V1)
+from GPSoI import recuperation_coordonees_ip_brassard_V2    #Obtention des iformations lie a l'adresse IP de l'utilisateur (V2)
+
+from emergency_number import numero_urgence                 #Obtention d'un/des numeros d'urgence(s) correspondant(s) a la localisation GPSoI de l'Utilisateur
+
+from Map_YANDEX import getMap                               #Obtention de la Carte sous forme d'une Image.JPG de la position GPS de l'Utilisateur
+from Map_YANDEX import getMap_ISS                           #Obtention de la Carte sous forme d'une Image.JPG de la position GPS de la Station Spacial International
+
+from ISS_locate import GPS_Now_ISS                          #Obtention de la localisation de l'ISS en temps reel
+from ISS_locate import GPS_Predict_ISS                      #Obtention des passages visibles de l'ISS dans le ciel par rapporta la Position GPS de l'Utilisateur
 #------------------------------------------------------------
 #------------------------------------------------------------
 # Add the root Extra dir so Python can find the modules
 import sys
-sys.path.append('/home/pi/ProjetBrassard/Extra')
+sys.path.append('/home/pi/ProjetBrassard/Extra')            #On indique au systeme ou ce situe le repertoire "Extra" dans l'Appareil
 
-from food_suggest import get_recette
-from Deezer_top_chart_suggest import top_chart_suggestion
-from Deezer_top_chart import top_chart
-from nettoyage_du_cache import clear_cache
+from food_suggest import get_recette                        #Chargement d'une fonction permettant d'obtenir une recette par Internet de facon aleatoire
+from Deezer_top_chart_suggest import top_chart_suggestion   #Chargement d'une fonction permettant d'obtenir une musique du Top10 Deezer de facon aleatoire
+from Deezer_top_chart import top_chart                      #Chargement d'une fonction permettant d'obtenir le Top10 Deezer integralement
+from nettoyage_du_cache import clear_cache                  #Chargement d'une fonction permettant de Nettoyer le Repertoire du Projet des fichier caches Python
 
-from Infos_Hardware import CPU_usage
-from Infos_Hardware import CPU_temp
-from Infos_Hardware import SoC_info
-from Infos_Hardware import MEM_info
+from Infos_Hardware import CPU_usage                        #Obtention de l'utilisation du Processeur par le Systeme d'exploitation et ses programmes autour
+from Infos_Hardware import CPU_temp                         #Obtention de la Temperature du Processeur sur la carte mere
+from Infos_Hardware import SoC_info                         #Obtention des informations concernant le package CPU+GPU
+from Infos_Hardware import MEM_info                         #Obtention de l'utilisation de la Memoire Vive du Systeme
 #------------------------------------------------------------
 
 fenetre = Tk()                                                                      #Creation d'une Fenetre Maîtresse TK appeler "fenetre"
@@ -613,7 +619,7 @@ boutonclose=Button(fenetre, text="Fermer", command=fenetre.quit).pack() #.grid(r
 if __name__ == "__main__":
     try:
         clear_cache()
-        lance_clavier()
+        #lance_clavier()
 
         #Récupération des informations pour la Mise à jour du LABEL toute les 1 milliseconde quand la fenêtre Maitre est lancée
         fenetre.after(1, update_temps_actuel)               #update_temps_actuel()
