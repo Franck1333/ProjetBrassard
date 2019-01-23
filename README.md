@@ -130,7 +130,7 @@ Example 	: 	Any help or example that I used for the project
 Extra 		: 	Various (Not-main) programs and some (ideas) features that maybe will be developped in the future
 GPS 		:	Main features use the GPS USB STICK or in realtion with GPS data
 ```
-#### Files in "/TravelKit_RPI/Extra/"
+#### Files in "/ProjetBrassard/Extra/"
  - MISC and Future features
 ```
  - Deezer_Recherche.py : This extra feature allows you to search an Artist,song or an Album on Deezer.com via your prompt.
@@ -145,7 +145,7 @@ GPS 		:	Main features use the GPS USB STICK or in realtion with GPS data
  - ChatPython : This is an attempt to integrate a chat into the project with Tkinter
  ```
 
-#### Files in "/TravelKit_RPI/GPS/"
+#### Files in "/ProjetBrassard/GPS/"
 - GPS data
 ```
 - Boussole.py : Get Compass data by using the "Recuperation_Determination.py" file's data.
