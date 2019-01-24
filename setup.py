@@ -22,6 +22,6 @@ setup(
     license='lgpl',
     packages=find_packages(),
     include_package_data=True,
-    install_requires=["geopy==1.18.1","pyowm==2.9"], #Get the Dependencies from Pypi (pip install)
+    install_requires=["geopy==1.18.1","pyowm==2.9","unidecode","unirest"], #Get the Dependencies from Pypi (pip install)
     dependency_links=['https://github.com/pimoroni/hyperpixel.git','https://github.com/csparpa/pyowm.git'], #Get the Dependencies via HTTP(s)
 )

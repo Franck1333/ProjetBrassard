@@ -288,11 +288,11 @@ def determine_Brassard():
     Code_Postal =   location.raw['address']['postcode']                     #Enregistrement du Code Postal depuis la version "RAW" du Service Nominatim
     Pays =          location.raw['address']['country']                      #Enregistrement du Pays depuis la version "RAW" du Service Nominatim
 
-    print(Ville)                                                            #Affichage de la Ville
-    print(Numero_Maison)                                                    #Affichage du Numéro de Positionnement dans la Rue
-    print(Rue)                                                              #Affichage du Nom de la Rue
-    print(Code_Postal)                                                      #Affichage du Code Postal
-    print(Pays)                                                             #Affichage du Pays
+    #print(Ville)                                                            #Affichage de la Ville
+    #print(Numero_Maison)                                                    #Affichage du Numéro de Positionnement dans la Rue
+    #print(Rue)                                                              #Affichage du Nom de la Rue
+    #print(Code_Postal)                                                      #Affichage du Code Postal
+    #print(Pays)                                                             #Affichage du Pays
     #{'place_id': '654513', 'osm_type': 'node', ...}                        #Exemple du format des données reçu enregistrer dans "location.raw"
 
     #if Ville or Numero_Maison or Rue or Code_Postal or Pays == None :
