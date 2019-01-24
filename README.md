@@ -1,3 +1,4 @@
+
 # Projet Brassard
   
 This software has been develloped to build a connected Armband by using a Raspberry Pi + Python (w/Tkinter) and a Awesome 4inch display by Pimoroni.
@@ -5,7 +6,8 @@ This software has been develloped to build a connected Armband by using a Raspbe
 For the people who love to walk in the Nature, you will be able to get useful details about the environement where you are by Using an USB GPS and some API with an Internet USB Modem, plus Weather forecast with the GPS coordinates and ISS position in real time and more...
 
 In this project, you will be able to interact to the software with a Tkinter graphic user interface.
-  
+[![Image](https://i.goopics.net/LXZ5A.jpg)](https://goopics.net/i/LXZ5A)  
+
 ## Getting Started  
   
 To get a copy of the project , you can go on the GitHub's webpage of the project and click on the green button to download as a .ZIP file. However , if you're using a prompt console on an Unix machine use this line :
@@ -162,6 +164,8 @@ GPS 		:	Main features use the GPS USB STICK or in realtion with GPS data
 ## Authors
 
 -   **Franck ROCHAT**  -  _Initial work_  -  [Franck ROCHAT](https://github.com/Franck1333)  Thank You !  :heart:
+
+[![Image](https://zupimages.net/up/19/04/616p.jpg)](https://zupimages.net/up/19/04/616p.jpg)
 <!--stackedit_data:
 eyJoaXN0b3J5IjpbMTIyMzIwMzM2NSw3NDM1NjU0MDEsLTIyOD
 MyNDIxMSwxMjU2MTU4MTIxLDE3NDkyODYwOTYsMTk2OTcwMjk2
