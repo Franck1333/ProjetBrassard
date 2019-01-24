@@ -608,6 +608,9 @@ def lance_clavier():
     print("Lancement du Clavier Virtuel") 
     #os.system("matchbox-keyboard &")   #sudo apt-get install matchbox-keyboard
     os.system("florence &")             #sudo apt-get install florence && sudo apt-get install at-spi2-core
+    print("""This commmand line must be executed anyway to install the Virtual Keyboard Florence :
+             The Florence's Software :
+             sudo apt-get install florence && sudo apt-get install at-spi2-core""")
 #-------------------------------------Clavier Virtuel-----------------------------------------
 
 #------------------------------------------------------------------------------     
