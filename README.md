@@ -103,15 +103,11 @@ To run the project , you can run the small script file called "Start.sh" in the 
 To run the project ; if you want to see the console activities , you can launch the file called "BrassardMain.py"  into the Command Line Prompt with "sudo python BrassardMain.py" in the main folder.
 
 #### The Last Way to run the project :
-To run the project ; if you want the project run automatically when system start-up ; Go to launch a Prompt and type:
+To run the Project with a G.I.U ; if you want the project run automatically when system start-up ; Go to launch a Prompt and type:
 
 ```
->>sudo nano /etc/rc.local
-
-AND WRITE those lines before "exit 0":
->> sleep 35  #Give time to the system to boot and get all the data necessary
->> bash /home/pi/ProjetBrassard/Start.sh &
-
+>>>sudo nano /home/pi/.config/lxsession/LXDE-pi/autostart
+>>@/home/pi/ProjetBrassard/Start.sh
 ```
 
 ## Running the tests  
